@@ -8,7 +8,7 @@ To run on a Raspberry Pi 3B+, Tomcat needs to be build against an ARMv7 processo
 
 All I had to add to the dockerfile was expose port 8080 for Apache
 
-## build
+## Build
 To build and deploy the container on the Raspberry Pi, it couldn't be simpler.  I built the container on my Windows PC.
 ### Build the container
 ```dockerfile
@@ -19,7 +19,7 @@ So the Raspberry Pi could access the container image, I pushed it to my containe
 ```
 docker login
 ```
-###Get a list of your docker images
+### Get a list of your docker images
 ```
 docker images
 ```
@@ -28,7 +28,7 @@ the output should look like this
 REPOSITORY                                 TAG                 IMAGE ID            CREATED              SIZE
 sample-tomcat                              latest              1234567890ab        About a minute ago   283MB
 ```
-###Push your container
+### Push your container
 My dockerhub id is appthem (replace this with your own). I have tagged the image with "firsttry" as it's not best practice to use the default "latest".
 ```
 docker tag 1234567890ab appthem/sample-tomcat:firsttry
